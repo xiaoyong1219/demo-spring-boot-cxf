@@ -16,7 +16,7 @@ import javax.jws.WebService;
         endpointInterface = "com.dongxiaoyong.webservice.CommonService"// 接口地址
 )
 @Component
-public class CommonServiceImp implements CommonService {
+public class CommonServiceImpl implements CommonService {
 
     @Override
     public String sayHi(String name) {
