@@ -2,12 +2,9 @@ package com.dongxiaoyong.server;
 
 import com.dongxiaoyong.webservice.CommonService;
 import com.dongxiaoyong.webservice.HelloService;
-import com.dongxiaoyong.webservice.impl.HelloServiceImpl;
 import org.apache.cxf.Bus;
 import org.apache.cxf.jaxws.EndpointImpl;
-import org.apache.cxf.transport.servlet.CXFServlet;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
