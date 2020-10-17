@@ -1,0 +1,5 @@
+cxf:
+  path: /ws #配置CXF服务路径，默认是services
+
+server:
+  port: 8080

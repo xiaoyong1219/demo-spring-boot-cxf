@@ -1,4 +1,4 @@
-package com.leftso;
+package com.dongxiaoyong;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

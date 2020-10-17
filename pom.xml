@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.leftso</groupId>
+	<groupId>com.dongxiaoyong</groupId>
 	<artifactId>demo-webservice-cxf</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>demo-webservice-cxf</name>
-	<description>Demo project for Spring Boot security</description>
+	<description>Demo project for Spring Boot webservice</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
