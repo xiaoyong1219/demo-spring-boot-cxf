@@ -2,6 +2,7 @@ package com.dongxiaoyong.server;
 
 import com.dongxiaoyong.webservice.CommonService;
 import com.dongxiaoyong.webservice.HelloService;
+import com.dongxiaoyong.webservice.interceptor.OutInterceptor;
 import org.apache.cxf.Bus;
 import org.apache.cxf.jaxws.EndpointImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +22,13 @@ public class CxfServerConfig {
     private Bus bus;
 
     @Autowired
-    CommonService commonService;
+    private CommonService commonService;
 
     @Autowired
-    HelloService helloService;
+    private HelloService helloService;
 
+    @Autowired
+    private OutInterceptor outInterceptor;
 
     /**
      * 发布CommonServiceImpl服务
@@ -41,6 +44,7 @@ public class CxfServerConfig {
         //CXF默认的服务路径是"/services/**"。如果想改变它的url。在application.yml中修改cxf.path的值
         EndpointImpl endpoint = new EndpointImpl(bus, commonService);
         endpoint.publish("/common");
+        endpoint.getOutInterceptors().add(outInterceptor);
         return endpoint;
     }
 
@@ -58,8 +62,10 @@ public class CxfServerConfig {
         //CXF默认的服务路径是"/services/**"。如果想改变它的url。在application.yml中修改cxf.path的值
         EndpointImpl endpoint = new EndpointImpl(bus, helloService);
         endpoint.publish("/hello");    //发布地址
+        endpoint.getOutInterceptors().add(outInterceptor);
         return endpoint;
 
     }
+
 
 }
