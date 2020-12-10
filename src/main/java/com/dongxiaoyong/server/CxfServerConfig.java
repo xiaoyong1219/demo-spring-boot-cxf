@@ -29,7 +29,7 @@ public class CxfServerConfig {
 
     /**
      * 发布CommonServiceImpl服务
-     * 访问地址 http://127.0.0.1:8080/sws/common?wsdl
+     * 访问地址 http://127.0.0.1:8080/ws/common?wsdl
      * @param
      * @Author :dongxiaoyong
      * @Date : 2020/10/17 13:31

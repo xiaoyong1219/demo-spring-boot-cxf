@@ -1,5 +1,8 @@
 package com.dongxiaoyong.webservice;
 
+import com.dongxiaoyong.webservice.enetity.UserBean;
+import com.fasterxml.jackson.databind.util.JSONPObject;
+
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
@@ -18,5 +21,9 @@ public interface CommonService {
 	@WebMethod
 	@WebResult(name = "String", targetNamespace = "")
 	String sayHi(@WebParam(name = "userName") String name);
+
+	@WebMethod
+	@WebResult(name = "String", targetNamespace = "")
+	String sayHiTwo(@WebParam(name = "userBeanJsonStr") String json);
 
 }
